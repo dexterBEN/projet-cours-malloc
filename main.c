@@ -1,8 +1,10 @@
 /*
-*  rey_s    
-*  benoni_d
-*
+** ETNA PROJECT, 09/01/2019 by rey_s, benoni_d
+** Malloc
+** File description:
+**      This project consists in rewriting the malloc and free functions.
 */
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
