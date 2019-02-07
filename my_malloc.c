@@ -13,7 +13,7 @@
 ** return NULL: case sbrk failed
 */
 
-void *my_malloc(size_t size)
+void *malloc(size_t size)
 {
     void *p = sbrk(0);
     void *request = sbrk(size);
