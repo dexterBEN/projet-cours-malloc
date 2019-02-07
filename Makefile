@@ -1,29 +1,31 @@
-CC=gcc
+CC		=	gcc
 
-RM=rm -f
+NAME	=	libmy_malloc_$(shell uname).so
 
-CFLAGS = -W -Wall -Wextra -Werror
+RM		= 	rm -f
 
-SRCS = $(wildcard *.c)
+CFLAGS 	= 	-W -Wall -Wextra -Werror
 
-OBJS = $(SRCS:.c=.o)
+SRCS 	= 	$(wildcard *.c)
 
-all: malloc
+OBJS 	= 	$(SRCS:.c=.o)
 
-%.o: %.c
-	@echo "Compiling module" $@
-	$(CC) -c $<
+all		:	malloc
 
-malloc: $(OBJS)
-	@echo "Linking objects into" $@
-	$(CC) -o $@ $(CFLAGS) $(OBJS)
+%.o		: 	%.c
+			@echo "Compiling module" $@
+			$(CC) -c $<
 
-clean:
-	$(RM) $(OBJS)
+malloc	: 	$(OBJS)
+			@echo "Linking objects into" $@
+			$(CC) -o $@ $(CFLAGS) $(OBJS)
 
-mrproper: clean
-	$(RM) malloc
+clean	:
+			$(RM) $(OBJS)
 
-rebuild: mrproper all
+mrproper: 	clean
+			$(RM) malloc
 
-.PHONY: clean mrproper rebuild
+rebuild	: 	mrproper all
+
+.PHONY	: 	clean mrproper rebuild
