@@ -12,6 +12,12 @@
 #include <string.h>
 #include <stdio.h>
 
+/*
+** Structure d'un block alloué/non-alloué
+** size_t size: taille du block
+** char free: Flag pour savoir si le block est free, 1->free, 0->not free
+*/
+
 struct block {
     size_t size;
     char free;

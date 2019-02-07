@@ -5,25 +5,7 @@
 **      This project consists in rewriting the malloc and free functions.
 */
 
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <assert.h>
-#include <string.h>
-//#include "free.c"
-
-/*
-** Structure d'un block alloué/non-alloué
-** size_t size: taille du block
-** char free: Flag pour savoir si le block est free, 1->free, 0->not free
-*/
-
-struct block
-{
-    size_t size;
-    char free;
-    struct block *next;
-};
+#include "my_malloc.h"
 
 /*
 ** void *p = sbrk(0): The beginning of the heap address
