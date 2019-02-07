@@ -77,5 +77,5 @@ int main()
   }*/
 
   //my_free(articles);
-    return (EXIT_SUCCESS);
+    return (0);
 }
