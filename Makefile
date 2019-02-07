@@ -2,9 +2,11 @@ CC 	= gcc
 
 NAME 	= libmy_malloc_$(shell uname).so
 
+LNAME	= libmy_malloc.so
+
 RM 	= rm -f
 
-CFLAGS 	= -W -Wall -Wextra -Werror
+CFLAGS 	= -W -Wall -Werror
 
 SRCS 	= $(wildcard *.c)
 
