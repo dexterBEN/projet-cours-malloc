@@ -1,10 +1,12 @@
 # project-courses-malloc
 This project consists in rewriting the malloc and free functions of the libc.
 
-Prototypes of functions:
+###  Prototypes of functions:
+
+```
 void*   malloc(size_t size);
 void    free(void *ptr);
+```
 
-#Purpose 
+###  Purpose
 Recoded our function malloc() for allocation memory, understand the memory manage.
-The malloc() function allocates size bytes and returns a pointer to the allocated memory.
